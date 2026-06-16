@@ -1,0 +1,100 @@
+:root {
+  --bg: #f3faf3;
+  --surface: #ffffff;
+  --surface-strong: #e7f4e8;
+  --text: #163a17;
+  --text-muted: #5e7d5f;
+  --primary: #3e8e41;
+  --primary-dark: #2f6730;
+  --accent: #a5d6a7;
+  --shadow: 0 18px 50px rgba(18, 72, 23, 0.08);
+  --radius: 24px;
+  --radius-sm: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #eef8ed 0%, #f7fcf6 100%);
+  min-height: 100%;
+}
+
+img { max-width: 100%; display: block; border-radius: var(--radius-sm); }
+
+.container { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+
+.navbar {
+  position: sticky; top: 0; z-index: 999;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(31, 86, 31, 0.08);
+}
+
+.navbar .container { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
+
+.logo { display: inline-flex; align-items: center; gap: 0.75rem; font-weight: 700; color: var(--primary-dark); }
+
+.nav-links { display: flex; gap: 1.5rem; list-style: none; margin: 0; }
+
+.nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 600; transition: 0.25s; }
+
+.nav-links a:hover { color: var(--primary-dark); }
+
+.feature-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.encyclo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+dl { margin: 1.5rem 0 0; padding: 1rem; background: var(--surface-strong); border-radius: var(--radius-sm); }
+
+dt { font-weight: 700; color: var(--primary-dark); margin-top: 0.5rem; }
+
+dd { margin-left: 0; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+
+input, textarea {
+  width: 100%; padding: 1rem;
+  border: 1px solid rgba(64, 123, 72, 0.2);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(62, 142, 65, 0.1);
+}
+
+.forum-list { list-style-type: disc; padding-left: 20px; line-height: 2; }
+
+.forum-list ul { list-style-type: circle; margin-left: 20px; }
+
+.btn-primary {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+}
+
+.footer { padding: 3rem 0; color: var(--text-muted); text-align: center; }
+
+ 
+  .encyclo-grid { grid-template-columns: 1fr; }
